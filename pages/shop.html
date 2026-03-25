@@ -5,16 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop — Red Beard Ops</title>
   <meta name="description" content="Shop custom handmade knives and 3D printed jigs from Red Beard Ops." />
-  <link rel="icon" href="../images/RBO_Knife_Circle.png" type="image/png" />
+  <link rel="icon" href="../images/RBO_Circle_2026.png" type="image/png" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    /* ── Shop-specific styles ── */
     .shop-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 24px;
     }
-
     .product-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -22,12 +20,10 @@
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .product-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 32px rgba(0,0,0,0.1);
     }
-
     .product-thumb {
       width: 100%;
       aspect-ratio: 1/1;
@@ -37,17 +33,8 @@
       align-items: center;
       justify-content: center;
     }
-
-    .product-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .product-body {
-      padding: 20px;
-    }
-
+    .product-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .product-body { padding: 20px; }
     .product-category {
       font-family: var(--font-condensed);
       font-size: 0.75rem;
@@ -57,35 +44,30 @@
       color: var(--orange);
       margin-bottom: 6px;
     }
-
     .product-name {
       font-family: var(--font-condensed);
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 6px;
     }
-
     .product-desc {
       font-size: 0.88rem;
       color: var(--muted);
       line-height: 1.5;
       margin-bottom: 16px;
     }
-
     .product-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
     }
-
     .product-price {
       font-family: var(--font-condensed);
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--dark);
     }
-
     .product-price .price-note {
       font-size: 0.75rem;
       font-weight: 600;
@@ -93,7 +75,6 @@
       display: block;
       line-height: 1;
     }
-
     .shop-notice {
       background: #fff8f5;
       border: 1px solid rgba(232,98,26,0.2);
@@ -105,7 +86,6 @@
       color: var(--text);
       line-height: 1.6;
     }
-
     .shop-notice strong {
       font-family: var(--font-condensed);
       font-size: 1rem;
@@ -114,8 +94,6 @@
       display: block;
       margin-bottom: 4px;
     }
-
-    /* Square embed container */
     .square-embed-wrapper {
       background: var(--gray);
       border-radius: 8px;
@@ -124,11 +102,52 @@
       border: 2px dashed var(--border);
       margin-top: 48px;
     }
-
     .square-embed-wrapper p {
       color: var(--muted);
       margin-bottom: 20px;
       font-size: 0.95rem;
+    }
+    /* ── Amazon Store ── */
+    .amazon-section {
+      background: var(--dark);
+      padding: 56px 24px;
+      border-top: 1px solid #222;
+    }
+    .amazon-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .amazon-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+    }
+    .amazon-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-condensed);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 7px;
+      background: #e7ebce;
+      color: #111;
+      border: 2px solid #ff9900;
+      transition: all 0.2s;
+    }
+    .amazon-btn-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+    .amazon-btn:hover {
+      background: #e68a00;
+      border-color: #e68a00;
+      transform: translateY(-1px);
     }
   </style>
 </head>
@@ -138,7 +157,7 @@
   <nav class="navbar">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo">
-        <img src="../images/RBO_Knife_Circle.png" alt="Red Beard Ops Logo" />
+        <img src="../images/RBO_Circle_2026.png" alt="Red Beard Ops Logo" />
         <span class="nav-logo-text">RED BEARD <span>OPS</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu">
@@ -176,11 +195,6 @@
         OPTION A — EMBED YOUR SQUARE STORE DIRECTLY
         Replace the block below with your Square embed code.
         Get it from: Square Dashboard → Online → Website → Embed Store
-        It will look something like:
-          <script src="https://square.site/buy/YOUR_ITEM_ID/embed.js"></script>
-        Or you can iframe your full Square site:
-          <iframe src="https://redbeardops.square.site" ...></iframe>
-        ════════════════════════════════════════════════════════════════
 
         OPTION B — LIST PRODUCTS MANUALLY (shown below as placeholders)
         Remove placeholder cards and add real ones with your Square Buy Now links.
@@ -190,7 +204,7 @@
 
       <div class="shop-grid">
 
-        <!-- Product Card 1 — Custom Knife (example) -->
+        <!-- Product Card 1 — Custom Knife -->
         <div class="product-card">
           <div class="product-thumb" style="background:#f0f0f0; display:flex; align-items:center; justify-content:center;">
             <!-- Replace with: <img src="../images/product1.jpg" alt="Product Name"> -->
@@ -204,19 +218,13 @@
             <h3 class="product-name">Your Knife Name</h3>
             <p class="product-desc">Steel, handle material, length. Add a short description of this piece.</p>
             <div class="product-footer">
-              <div class="product-price">
-                $0.00
-                <span class="price-note">+ shipping</span>
-              </div>
-              <!-- Replace href with your Square product link -->
-              <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px; font-size:0.85rem;">
-                Buy Now
-              </a>
+              <div class="product-price">$0.00<span class="price-note">+ shipping</span></div>
+              <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px; font-size:0.85rem;">Buy Now</a>
             </div>
           </div>
         </div>
 
-        <!-- Product Card 2 — 3D Printed Jig (example) -->
+        <!-- Product Card 2 — 3D Printed Jig -->
         <div class="product-card">
           <div class="product-thumb" style="background:#f0f0f0; display:flex; align-items:center; justify-content:center;">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -230,13 +238,8 @@
             <h3 class="product-name">Your Jig Name</h3>
             <p class="product-desc">What the jig does, what it fits, material. Printed and shipped by Slant 3D.</p>
             <div class="product-footer">
-              <div class="product-price">
-                $0.00
-                <span class="price-note">ships from Slant 3D</span>
-              </div>
-              <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px; font-size:0.85rem;">
-                Buy Now
-              </a>
+              <div class="product-price">$0.00<span class="price-note">ships from Slant 3D</span></div>
+              <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px; font-size:0.85rem;">Buy Now</a>
             </div>
           </div>
         </div>
@@ -255,39 +258,40 @@
             <h3 class="product-name">Your Product Name</h3>
             <p class="product-desc">Short description of the product and what makes it worth having.</p>
             <div class="product-footer">
-              <div class="product-price">
-                $0.00
-                <span class="price-note">+ shipping</span>
-              </div>
-              <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px; font-size:0.85rem;">
-                Buy Now
-              </a>
+              <div class="product-price">$0.00<span class="price-note">+ shipping</span></div>
+              <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px; font-size:0.85rem;">Buy Now</a>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Square embed placeholder -->
       <div class="square-embed-wrapper">
-        <p>
-          <strong>Prefer to browse the full store?</strong><br>
-          All products are also available on the Square storefront.
-        </p>
-        <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-dark">
-          Visit Full Square Store →
-        </a>
+        <p><strong>Prefer to browse the full store?</strong><br>All products are also available on the Square storefront.</p>
+        <a href="https://redbeardops.square.site" target="_blank" rel="noopener" class="btn btn-dark">Visit Full Square Store →</a>
       </div>
-
     </div>
   </section>
+
+  <!-- ── Amazon Store ── -->
+  <div class="amazon-section">
+    <div class="amazon-inner">
+      <img class="amazon-icon" src="../images/Amazon_icon_2.png" alt="Amazon icon">
+      <h2 class="section-title" style="color:var(--white); margin-bottom:12px;">RBO Amazon Store</h2>
+      <p style="color:#999; margin-bottom:28px; line-height:1.7;">Tools, materials, and gear used in the builds — all in one place. Everything recommended comes from actual shop use.</p>
+      <a href="https://www.amazon.com/shop/redbeardops" target="_blank" rel="noopener" class="amazon-btn">
+        <img class="amazon-btn-icon" src="../images/Amazon_icon_2.png" alt="Amazon icon">
+        Visit the Amazon Store
+      </a>
+    </div>
+  </div>
 
   <!-- ── Footer ── -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/RBO_Knife_Circle.png" alt="RBO Logo" />
-        <p>Custom handmade knives and shop builds out of a Texas garage. Red Beard Ops LLC.</p>
+        <img src="../images/RBO_Circle_2026.png" alt="RBO Logo" />
+        <p>Red Beard Ops LLC is run by James Keeton — a one-man operation dedicated to building high-quality custom knives and sharing the entire process on YouTube.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -300,14 +304,25 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Channels</h4>
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://x.com/RedBeardOps" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/redbeardops/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/RedBeardOps/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.patreon.com/c/RedBeardOps" target="_blank" rel="noopener">Patreon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>YT Channels</h4>
         <ul>
           <li><a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">Red Beard Ops</a></li>
+          <li><a href="https://www.youtube.com/@redbeardengineered" target="_blank" rel="noopener">Red Beard Engineered</a></li>
+          <li><a href="https://www.youtube.com/@RedBeardLifts" target="_blank" rel="noopener">Red Beard Lifts</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Red Beard Ops LLC. All rights reserved.</span>
+      <span>© 2026 Red Beard Ops, LLC. All rights reserved.</span>
       <span>Built by hand. Hosted on Cloudflare.</span>
     </div>
   </footer>

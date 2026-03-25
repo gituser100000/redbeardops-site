@@ -5,8 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red Beard Ops — Custom Handmade Knives</title>
   <meta name="description" content="Red Beard Ops LLC — Custom handmade knives, craftsmanship, and tool reviews out of the garage." />
-  <link rel="icon" href="images/RBO_Knife_Circle.png" type="image/png" />
+  <link rel="icon" href="images/RBO_Circle_2026.png" type="image/png" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Social / Channels / Amazon sections ── */
+    .social-section {
+      background: var(--dark);
+      padding: 56px 24px;
+      border-top: 3px solid var(--orange);
+    }
+
+    .social-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-condensed);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 13px 24px;
+      border-radius: 4px;
+      border: 2px solid rgba(255,255,255,0.15);
+      color: #ccc;
+      background: rgba(255,255,255,0.05);
+      transition: all 0.2s;
+    }
+
+    .social-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .social-btn:hover { transform: translateY(-2px); border-color: var(--orange); color: var(--white); }
+    .social-btn.twitter:hover  { border-color: #1d9bf0; color: #1d9bf0; }
+    .social-btn.instagram:hover { border-color: #e1306c; color: #e1306c; }
+    .social-btn.facebook:hover  { border-color: #1877f2; color: #1877f2; }
+    .social-btn.patreon:hover   { border-color: #ff424d; color: #ff424d; }
+
+    /* ── Other Channels ── */
+    .channels-section {
+      background: var(--gray);
+      padding: 56px 24px;
+    }
+
+    .channels-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .channel-card {
+      position: relative;
+      background: var(--dark);
+      border-radius: 8px;
+      padding: 32px;
+      padding-right: 110px; /* make room for the logo */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      border: 1px solid #222;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .channel-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+    }
+
+    .channel-logo {
+      position: absolute;
+      top: 50px;
+      right: 24px;
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .channel-label {
+      font-family: var(--font-condensed);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    .channel-name {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      color: var(--white);
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+
+    .channel-desc {
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1.6;
+  flex: 1;
+  max-width: 320px; /* adjust to taste */
+}
+
+    /* ── Amazon Store ── */
+    .amazon-section {
+      background: var(--dark);
+      padding: 56px 24px;
+      border-top: 1px solid #222;
+    }
+
+    .amazon-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .amazon-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+    }
+
+    .amazon-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-condensed);
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 7px;
+      background: #e7ebce;
+      color: #111;
+      border: 2px solid #ff9900;
+      transition: all 0.2s;
+    }
+
+    .amazon-btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+    .amazon-btn:hover {
+      background: #e68a00;
+      border-color: #e68a00;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .channels-grid { grid-template-columns: 1fr; }
+      .social-grid { gap: 12px; }
+      .channel-card { padding-right: 32px; }
+      .channel-logo { position: static; width: 60px; height: 60px; margin-bottom: 4px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +180,7 @@
   <nav class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/RBO_Knife_Circle.png" alt="Red Beard Ops Logo" />
+        <img src="images/RBO_Circle_2026.png" alt="Red Beard Ops Logo" />
         <span class="nav-logo-text">RED BEARD <span>OPS</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu">
@@ -32,34 +198,36 @@
 
   <!-- ── Hero ── -->
   <section class="hero">
-    <img src="images/RBO_Knife_Circle.png" alt="Red Beard Ops" class="hero-logo" />
     <h1>RED BEARD <span>OPS</span></h1>
-    <p class="hero-tagline">Custom Handmade Knives &nbsp;·&nbsp; Craftsmanship &nbsp;·&nbsp; Tool Reviews</p>
+    <p class="hero-tagline">Custom Handmade Knives &nbsp;·&nbsp; Craftsmanship &nbsp;·&nbsp; YouTube</p>
     <div class="hero-divider"></div>
     <p class="hero-description">
-      Hand-forged knives built in a Texas garage. Every blade is designed, ground, and finished
-      from scratch — no shortcuts, no compromises.
+      Red Beard Ops LLC is dedicated to crafting high-quality custom knives
+      and producing entertaining, educational knifemaking content on YouTube.
     </p>
     <div class="hero-buttons">
-      <a href="pages/gallery.html" class="btn btn-primary">View Knife Gallery</a>
+      <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg class="yt-icon" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Watch on YouTube
+      </a>
       <a href="pages/shop.html" class="btn btn-outline">Shop Now</a>
+      <a href="pages/gallery.html" class="btn btn-outline">View Knife Gallery</a>
     </div>
   </section>
 
-  <!-- ── What We Do ── -->
+  <!-- ── What I Do ── -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">What We Do</div>
+        <div class="section-label">The Mission</div>
         <h2 class="section-title">Craft. Build. Share.</h2>
-        <p class="section-subtitle">From raw steel to finished blade — every step documented and shared.</p>
       </div>
 
       <div class="card-grid">
 
         <div class="card">
           <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <img src="images/Little_Micarta_Bowie_2025.jpg" alt="Little Micarta Bowie 2025" style="width:100%; height:100%; object-fit:cover;">
               <path d="M10 54L28 12L52 36L40 40L36 52L10 54Z" stroke="#e8621a" stroke-width="2.5" fill="none"/>
               <line x1="28" y1="12" x2="52" y2="36" stroke="#e8621a" stroke-width="2.5"/>
             </svg>
@@ -74,7 +242,7 @@
 
         <div class="card">
           <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <img src="images/DiskGrinder_DIY.jpg" alt="Disc Grinder DIY" style="width:100%; height:100%; object-fit:cover;">
               <rect x="12" y="20" width="40" height="28" rx="2" stroke="#e8621a" stroke-width="2.5" fill="none"/>
               <path d="M20 20V16a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v4" stroke="#e8621a" stroke-width="2.5"/>
               <circle cx="32" cy="34" r="4" stroke="#e8621a" stroke-width="2.5" fill="none"/>
@@ -82,7 +250,7 @@
           </div>
           <div class="card-body">
             <div class="card-tag">DIY Projects</div>
-            <h3 class="card-title">Shop Builds &amp; Guides</h3>
+            <h3 class="card-title">Workshop Builds &amp; Guides</h3>
             <p class="card-desc">Jigs, fixtures, shop tools, and equipment builds — fully documented with plans and build videos.</p>
             <a href="pages/diy.html" class="card-link">View Projects →</a>
           </div>
@@ -90,7 +258,7 @@
 
         <div class="card">
           <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <img src="images/Knife_Design.jpg" alt="Knife Design" style="width:100%; height:100%; object-fit:cover;">
               <rect x="14" y="10" width="28" height="36" rx="2" stroke="#e8621a" stroke-width="2.5" fill="none"/>
               <path d="M42 18h6a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H24a2 2 0 0 1-2-2v-4" stroke="#e8621a" stroke-width="2.5"/>
               <line x1="20" y1="22" x2="36" y2="22" stroke="#e8621a" stroke-width="2"/>
@@ -110,45 +278,95 @@
     </div>
   </section>
 
-  <!-- ── About Strip ── -->
-  <div class="about-strip section-alt">
-    <div class="about-strip-text">
-      <div class="section-label">About RBO</div>
-      <h2 class="section-title" style="margin-bottom:16px;">Built in a Texas Garage</h2>
-      <p style="color:var(--muted); line-height:1.7; margin-bottom:16px;">
-        Red Beard Ops started as a one-man knifemaking operation — raw steel, hand tools, and a
-        garage full of sawdust and scale. What began as a passion project turned into a full
-        YouTube channel documenting every build, every mistake, and every lesson learned along the way.
-      </p>
-      <p style="color:var(--muted); line-height:1.7; margin-bottom:28px;">
-        If it involves a forge, an angle grinder, or a belt sander — it probably ends up on camera.
-      </p>
-      <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="btn btn-dark">
-        <svg class="yt-icon" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        Watch on YouTube
-      </a>
-    </div>
-    <div class="about-strip-image">
-      <img src="images/RBO_Knife_Circle.png" alt="Red Beard Ops" />
+  <!-- ── Find Us Online (Social Media) ── -->
+  <div class="social-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="color:var(--orange);">Stay Connected</div>
+        <h2 class="section-title" style="color:var(--white);">Find Red Beard Online</h2>
+        <p class="section-subtitle" style="color:#999;">Follow along for builds, updates, and behind the scenes.</p>
+      </div>
+      <div class="social-grid">
+
+        <!-- Twitter / X -->
+        <a href="https://x.com/RedBeardOps" target="_blank" rel="noopener" class="social-btn twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Twitter / X
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/redbeardops/" target="_blank" rel="noopener" class="social-btn instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Instagram
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/RedBeardOps/" target="_blank" rel="noopener" class="social-btn facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+
+        <!-- Patreon -->
+        <a href="https://www.patreon.com/c/RedBeardOps" target="_blank" rel="noopener" class="social-btn patreon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.82 2.41C18.78 2.41 22 5.65 22 9.62c0 3.96-3.22 7.19-7.18 7.19-3.95 0-7.17-3.23-7.17-7.19 0-3.97 3.22-7.21 7.17-7.21M2 21.6h3.5V2.41H2V21.6z"/></svg>
+          Patreon
+        </a>
+
+      </div>
     </div>
   </div>
 
-  <!-- ── YouTube CTA ── -->
-  <div class="yt-banner">
-    <h2>FOLLOW THE BUILD</h2>
-    <p>New knife builds, tool reviews, and shop projects — subscribe to stay in the loop.</p>
-    <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="yt-btn">
-      <svg class="yt-icon" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      Subscribe — Red Beard Ops
-    </a>
+  <!-- ── More From RBO (Other Channels) ── -->
+  <div class="channels-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Other Red Beard Channels</h2>
+      </div>
+      <div class="channels-grid">
+
+        <!-- Red Beard Engineered -->
+        <div class="channel-card">
+          <img src="images/RBE_Circle_2026.png" alt="Red Beard Engineered Logo" class="channel-logo" />
+          <div class="channel-name">RED BEARD ENGINEERED</div>
+          <p class="channel-desc">Side projects, DIY engineering, and builds that don't fit the knife channel. If it gets fabricated in the garage or installed on the home front, it ends up here.</p>
+          <a href="https://www.youtube.com/@redbeardengineered" target="_blank" rel="noopener" class="yt-btn" style="margin-top:8px; font-size:0.85rem; padding:10px 20px;">
+            <svg class="yt-icon" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Watch on YouTube
+          </a>
+        </div>
+
+        <!-- Red Beard Lifts -->
+        <div class="channel-card">
+          <img src="images/RedBeardLifts_Icon_Circle_2025.png" alt="Red Beard Lifts Logo" class="channel-logo" style="border-radius:8px;" />
+          <div class="channel-name">RED BEARD LIFTS</div>
+          <p class="channel-desc">Gym equipment reviews, home gym builds, and fitness content. No fluff — just honest takes on the gear that actually matters.</p>
+          <a href="https://www.youtube.com/@RedBeardLifts" target="_blank" rel="noopener" class="yt-btn" style="margin-top:8px; font-size:0.85rem; padding:10px 20px;">
+            <svg class="yt-icon" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Watch on YouTube
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Amazon Store ── -->
+  <div class="amazon-section">
+    <div class="amazon-inner">
+    <img class="amazon-icon" src="images/Amazon_icon_2.png" alt="Amazon icon">      <h2 class="section-title" style="color:var(--white); margin-bottom:12px;">RBO Amazon Store</h2>
+      <p style="color:#999; margin-bottom:28px; line-height:1.7;">Tools, materials, and gear used in the builds — all in one place. Everything recommended comes from actual shop use.</p>
+      <a href="https://www.amazon.com/shop/redbeardops" target="_blank" rel="noopener" class="amazon-btn">
+        <img class="amazon-btn-icon" src="images/Amazon_icon_2.png" alt="Amazon icon">        Visit the Amazon Store
+      </a>
+    </div>
   </div>
 
   <!-- ── Footer ── -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="images/RBO_Knife_Circle.png" alt="RBO Logo" />
-        <p>Custom handmade knives and shop builds out of a Texas garage. Red Beard Ops LLC.</p>
+        <img src="images/RBO_Circle_2026.png" alt="RBO Logo" />
+        <p>Red Beard Ops LLC is run by James Keeton — a one-man operation dedicated to building high-quality custom knives and sharing the entire process on YouTube.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -161,14 +379,25 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Channels</h4>
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://x.com/RedBeardOps" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/redbeardops/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/RedBeardOps/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.patreon.com/c/RedBeardOps" target="_blank" rel="noopener">Patreon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>YT Channels</h4>
         <ul>
           <li><a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">Red Beard Ops</a></li>
+          <li><a href="https://www.youtube.com/@redbeardengineered" target="_blank" rel="noopener">Red Beard Engineered</a></li>
+          <li><a href="https://www.youtube.com/@RedBeardLifts" target="_blank" rel="noopener">Red Beard Lifts</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Red Beard Ops LLC. All rights reserved.</span>
+      <span>© 2026 Red Beard Ops, LLC. All rights reserved.</span>
       <span>Built by hand. Hosted on Cloudflare.</span>
     </div>
   </footer>

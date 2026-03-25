@@ -1,0 +1,27 @@
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/gallery.html">Knife Gallery</a></li>
+          <li><a href="pages/diy.html">DIY Projects</a></li>
+          <li><a href="pages/library.html">File Library</a></li>
+          <li><a href="pages/shop.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://x.com/RedBeardOps" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/redbeardops/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/RedBeardOps/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.patreon.com/c/RedBeardOps" target="_blank" rel="noopener">Patreon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>YT Channels</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">Red Beard Ops</a></li>
+          <li><a href="https://www.youtube.com/@redbeardengineered" target="_blank" rel="noopener">Red Beard Engineered</a></li>
+          <li><a href="https://www.youtube.com/@RedBeardLifts" target="_blank" rel="noopener">Red Beard Lifts</a></li>
+        </ul>
+      </div>

@@ -504,7 +504,7 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #222;
@@ -615,9 +615,13 @@ footer {
   .about-strip-image { min-height: 220px; padding: 32px; }
   .about-strip-text { padding: 40px 24px; }
 
-  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 
   .hero { padding: 60px 24px 56px; }
   .hero-logo { width: 120px; height: 120px; }
+}
+
+@media (max-width: 480px) {
+  .footer-inner { grid-template-columns: 1fr; }
 }

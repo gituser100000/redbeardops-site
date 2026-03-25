@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Knife Gallery — Red Beard Ops</title>
   <meta name="description" content="Browse custom handmade knife builds from Red Beard Ops — every knife linked to its full YouTube build video." />
-  <link rel="icon" href="../images/RBO_Knife_Circle.png" type="image/png" />
+  <link rel="icon" href="../images/RBO_Circle_2026.png" type="image/png" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Override card-thumb to use object-fit cover for real photos */
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #111;
+    }
+    .card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .card:hover .card-thumb img {
+      transform: scale(1.04);
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +34,7 @@
   <nav class="navbar">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo">
-        <img src="../images/RBO_Knife_Circle.png" alt="Red Beard Ops Logo" />
+        <img src="../images/RBO_Circle_2026.png" alt="Red Beard Ops Logo" />
         <span class="nav-logo-text">RED BEARD <span>OPS</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu">
@@ -44,77 +64,282 @@
         ════════════════════════════════════════════════
         HOW TO ADD A KNIFE:
         Copy one .card block below and fill in:
-          - The YouTube thumbnail URL (or your own photo)
-          - The knife name
-          - A short description
-          - The YouTube video link in the <a> href
+          - Replace the img src with your image path
+          - Replace the href links with the YouTube video URL
+          - Update the knife name and description
+
+        TO USE A YOUTUBE THUMBNAIL instead of a local photo:
+          <img src="https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg" alt="Knife Name">
+
+        New knives go at the TOP of the card-grid (newest first).
         ════════════════════════════════════════════════
       -->
 
       <div class="card-grid">
 
-        <!-- Example Card 1 — replace with your real builds -->
+        <!-- ── Little Micarta Bowie 2025 ── -->
         <div class="card">
-          <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">
-            <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-              <!-- Replace the div above with: <img src="../images/knife1.jpg" alt="Knife Name"> -->
-              <svg width="80" height="30" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 24 L60 8 L78 14 L60 18 L18 26 Z" stroke="#e8621a" stroke-width="1.5" fill="rgba(232,98,26,0.08)"/>
-                <rect x="2" y="20" width="16" height="8" rx="2" stroke="#888" stroke-width="1.5" fill="none"/>
-              </svg>
+          <a href="https://youtu.be/ib4DSILq03Q" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Little_Micarta_Bowie_2025.jpg" alt="Little Micarta Bowie 2025" />
             </div>
           </a>
           <div class="card-body">
-            <div class="card-tag">Build Video</div>
-            <h3 class="card-title">Your Knife Name Here</h3>
-            <p class="card-desc">Steel type, handle material, overall length — add a short description of this build.</p>
-            <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+            <h3 class="card-title">Little Micarta Bowie - 2025</h3>
+            <p class="card-desc">Satin finished Bowie with a clipped point, steel guard and pommel, and rich brown Micarta scales with a brass accent spacer. Clean and classic.</p>
+            <a href="https://youtu.be/ib4DSILq03Q" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
           </div>
         </div>
 
-        <!-- Example Card 2 -->
+        <!-- ── Viking Challenge 2024 ── -->
         <div class="card">
-          <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">
-            <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-              <svg width="80" height="30" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 24 L60 8 L78 14 L60 18 L18 26 Z" stroke="#e8621a" stroke-width="1.5" fill="rgba(232,98,26,0.08)"/>
-                <rect x="2" y="20" width="16" height="8" rx="2" stroke="#888" stroke-width="1.5" fill="none"/>
-              </svg>
+          <a href="https://youtu.be/YwFD4h5DsDU" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Viking_Challenge_2024.jpg" alt="Viking Challenge 2024" />
             </div>
           </a>
           <div class="card-body">
-            <div class="card-tag">Build Video</div>
-            <h3 class="card-title">Your Knife Name Here</h3>
-            <p class="card-desc">Steel type, handle material, overall length — add a short description of this build.</p>
-            <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+            <h3 class="card-title">Viking Challenge - 2024</h3>
+            <p class="card-desc">Striking seax-style blade with a bold acid-etched finish, purple dyed stabilized maple burl handle, stainless fittings, and a decorative ball pommel. A challenge build that delivers.</p>
+            <a href="https://youtu.be/YwFD4h5DsDU" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
           </div>
         </div>
 
-        <!-- Example Card 3 -->
+        <!-- ── Heirloom Oak Bird & Trout 2024 ── -->
         <div class="card">
-          <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">
-            <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-              <svg width="80" height="30" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 24 L60 8 L78 14 L60 18 L18 26 Z" stroke="#e8621a" stroke-width="1.5" fill="rgba(232,98,26,0.08)"/>
-                <rect x="2" y="20" width="16" height="8" rx="2" stroke="#888" stroke-width="1.5" fill="none"/>
-              </svg>
+          <a href="https://youtu.be/PkkVVYiNrrY" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Heirloom_Oak_Bird_Trout_2024.jpg" alt="Heirloom Oak Bird and Trout 2024" />
             </div>
           </a>
           <div class="card-body">
-            <div class="card-tag">Build Video</div>
-            <h3 class="card-title">Your Knife Name Here</h3>
-            <p class="card-desc">Steel type, handle material, overall length — add a short description of this build.</p>
-            <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+            <h3 class="card-title">Heirloom Oak Bird &amp; Trout - 2024</h3>
+            <p class="card-desc">Textured stonewashed blade with a spine jimping and a full flat grind, dressed with quartersawn oak scales and a clean stainless pin. Built to be passed down.</p>
+            <a href="https://youtu.be/PkkVVYiNrrY" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
           </div>
         </div>
 
-      </div>
+        <!-- ── Samurai Challenge 2023 ── -->
+        <div class="card">
+          <a href="https://youtu.be/l_cJ35x7USA" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Samurai_Challenge_2023.jpg" alt="Samurai Challenge 2023" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Samurai Challenge - 2023</h3>
+            <p class="card-desc">Full-length Damascus tanto with a sweeping single-edge blade, green stabilized maple burl handle, wood and steel tsuba. The pattern on this blade has to be seen to be believed.</p>
+            <a href="https://youtu.be/l_cJ35x7USA" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
 
-      <!-- Placeholder notice — delete once you've added real builds -->
-      <div style="text-align:center; margin-top:48px; padding:40px; background:var(--gray); border-radius:8px; border:2px dashed var(--border);">
-        <p style="font-family:var(--font-condensed); font-size:1.1rem; font-weight:700; color:var(--muted); letter-spacing:1px;">
-          MORE BUILDS COMING — Replace placeholder cards with your real knife builds above.
-        </p>
+        <!-- ── AEB-L Chef's Knife 2023 ── -->
+        <div class="card">
+          <a href="https://youtu.be/YQKTA_qjuSU" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/AEB-L_Chefs-Knife-2023.jpg" alt="AEB-L Chef's Knife 2023" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">AEB-L Chef's Knife - 2023</h3>
+            <p class="card-desc">Satin finished chef's blade in AEB-L stainless, with a mosaic handle built from layered exotic woods including padauk, purpleheart, wenge, and dyed maple burl. A kitchen workhorse with gallery-worthy looks.</p>
+            <a href="https://youtu.be/YQKTA_qjuSU" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+                <!-- ── Chopper 2023 ── -->
+        <div class="card">
+          <a href="https://youtu.be/h8lldlGwabY" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Chopper_Challenge_2023.jpg" alt="Chopper Challenge 2023" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Chopper Challenge - 2023</h3>
+            <p class="card-desc">Forged from an old sledge hammer for the YouTube Chopper Challenge!</p>
+            <a href="https://youtu.be/h8lldlGwabY" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+
+        <!-- ── Low Layer Twist Bowie 2023 ── -->
+        <div class="card">
+          <a href="https://youtu.be/g19hDroWuDY" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Low_Layer_Twist_Bowie_2023.jpg" alt="Low Layer Twist Bowie 2023" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Low Layer Twist Bowie - 2023</h3>
+            <p class="card-desc">Hand-forged Damascus Bowie with a dramatic low-layer twist pattern, stabilized striped wood handle, steel guard, and a hand-tooled leather sheath with shagreen inlay.</p>
+            <a href="https://youtu.be/g19hDroWuDY" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Fantasy Challenge 2022 ── -->
+        <div class="card">
+          <a href="https://youtu.be/N9VmPedKFvM" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Fantasy_Challenge_2022.jpg" alt="Fantasy Challenge 2022" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Fantasy Challenge - 2022</h3>
+            <p class="card-desc">Wild multi-blade Damascus concept build — dual blades, a hook spike, copper guard, and a red stabilized maple burl handle. A challenge build that went fully off the rails in the best way.</p>
+            <a href="https://youtu.be/N9VmPedKFvM" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Lucky 7 Bowie 2022 ── -->
+        <div class="card">
+          <a href="https://youtu.be/6VOfalVEnTs" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Lucky7_Bowie_2022.jpg" alt="Lucky 7 Bowie 2022" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Lucky 7 Bowie - 2022</h3>
+            <p class="card-desc">Classic Bowie profile with a satin finished blade, brass D-ring guard, and green dyed stabilized maple burl handle. Bold proportions with a refined finish.</p>
+            <a href="https://youtu.be/6VOfalVEnTs" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── June Hunter 2022 ── -->
+        <div class="card">
+          <a href="https://youtu.be/adfJMNwI9C8" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/June_Hunter_2022.JPG" alt="June Hunter 2022" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">June Hunter - 2022</h3>
+            <p class="card-desc">Satin finished hunter with a substantial drop point blade, stainless guard, and spalted maple scales. A serious field knife with great hand fill.</p>
+            <a href="https://youtu.be/adfJMNwI9C8" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Crusader Dagger 2022 ── -->
+        <div class="card">
+          <a href="https://youtu.be/nvyYplfh96c" target="_blank" rel="noopener">
+            <!-- TODO: Replace href with the specific YouTube video link -->
+            <div class="card-thumb">
+              <img src="../images/Crusader_Dagger_2022.png" alt="Crusader Dagger 2022" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Crusader Dagger - 2022</h3>
+            <p class="card-desc">Double-edged satin blade with a full-length fuller, cruciform guard, black handle, and a disc pommel. A faithful medieval dagger build with clean lines and serious execution.</p>
+            <a href="https://youtu.be/nvyYplfh96c" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── EDC 2022 ── -->
+        <div class="card">
+          <a href="https://youtu.be/PhaTADlMcuY" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/EDC_2022.jpg" alt="EDC Knife 2022" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">EDC - 2022</h3>
+            <p class="card-desc">Satin finished drop point with OD green G10 scales, choil, and lanyard hole. Clean lines and a no-nonsense build made for everyday carry.</p>
+            <a href="https://youtu.be/PhaTADlMcuY" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Rainbow Damascus Kitchen Knife 2021 ── -->
+        <div class="card">
+          <a href="https://youtu.be/qwGdKEtOhrk" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Rainbow_Damascus_Kitchen_Knife_2021.jpg" alt="Rainbow Damascus Kitchen Knife 2021" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Rainbow Damascus Kitchen Knife - 2021</h3>
+            <p class="card-desc">Hand-forged Damascus blade with a flowing ladder pattern, stabilized maple burl handle, walnut bolster, and red spacer. A showpiece that can still work a cutting board.</p>
+            <a href="https://youtu.be/qwGdKEtOhrk" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+        <!-- ── Bitcoin Knife 2021 ── -->
+        <div class="card">
+          <a href="https://youtu.be/_Ph_LYE6Gcc" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Bitcoin_Knife_2021.JPG" alt="Bitcoin Knife 2021" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">The Bitcoin Knife - 2021</h3>
+            <p class="card-desc">Satin finished drop point with orange G10 scales — built with a hollow handle cavity designed to store a Ledger hardware wallet. One of a kind concept build.</p>
+            <a href="https://youtu.be/_Ph_LYE6Gcc" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Gyuto Challenge 2021 ── -->
+        <div class="card">
+          <a href="https://youtu.be/LWXrebY3dJc" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Gyuto_Challenge_2021.jpg" alt="Gyuto Challenge 2021" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Gyuto Challenge - 2021</h3>
+            <p class="card-desc">Clean satin finished gyuto with a tall blade and a gentle curve toward the tip, dark figured wood scales, and a single stainless pin. A challenge build with serious kitchen credibility.</p>
+            <a href="https://youtu.be/LWXrebY3dJc" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Battle Blade 2021 ── -->
+        <div class="card">
+          <a href="https://youtu.be/LgT424a8_2M" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Battle_Blade_2021.JPG" alt="Battle Blade 2021" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Battle Blade - 2021</h3>
+            <p class="card-desc">Stonewashed full-tang blade with a deep choil, brown and black swirled Micarta scales, and stainless pins. Built tough from the ground up.</p>
+            <a href="https://youtu.be/LgT424a8_2M" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Bird & Trout 2021 ── -->
+        <div class="card">
+          <a href="https://youtu.be/usDL_AI1ZqQ" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Bird_Trout_2021.jpg" alt="Bird and Trout Knife 2021" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Bird &amp; Trout - 2021</h3>
+            <p class="card-desc">Stonewashed blade with wenge wood scales and a hand-tooled leather sheath featuring a basket weave.</p>
+            <a href="https://youtu.be/usDL_AI1ZqQ" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
+        <!-- ── Bushcraft 2021 ── -->
+        <div class="card">
+          <a href="https://youtu.be/05oRi4XEGno" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/bushcraft_2021.JPG" alt="Bushcraft Knife 2021" />
+            </div>
+          </a>
+          <div class="card-body">
+            <h3 class="card-title">Bushcraft - 2021</h3>
+            <p class="card-desc">Stonewashed blade with a pronounced choil, camo Micarta scales, and a lanyard hole. A go-anywhere workhorse built for hard use in the field.</p>
+            <a href="https://youtu.be/05oRi4XEGno" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -134,8 +359,8 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/RBO_Knife_Circle.png" alt="RBO Logo" />
-        <p>Custom handmade knives and shop builds out of a Texas garage. Red Beard Ops LLC.</p>
+        <img src="../images/RBO_Circle_2026.png" alt="RBO Logo" />
+        <p>Red Beard Ops LLC is run by James Keeton — a one-man operation dedicated to building high-quality custom knives and sharing the entire process on YouTube.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -148,14 +373,25 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Channels</h4>
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://x.com/RedBeardOps" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/redbeardops/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/RedBeardOps/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.patreon.com/c/RedBeardOps" target="_blank" rel="noopener">Patreon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>YT Channels</h4>
         <ul>
           <li><a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">Red Beard Ops</a></li>
+          <li><a href="https://www.youtube.com/@redbeardengineered" target="_blank" rel="noopener">Red Beard Engineered</a></li>
+          <li><a href="https://www.youtube.com/@RedBeardLifts" target="_blank" rel="noopener">Red Beard Lifts</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Red Beard Ops LLC. All rights reserved.</span>
+      <span>© 2026 Red Beard Ops, LLC. All rights reserved.</span>
       <span>Built by hand. Hosted on Cloudflare.</span>
     </div>
   </footer>

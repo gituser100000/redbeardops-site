@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DIY Projects — Red Beard Ops</title>
   <meta name="description" content="Shop builds, jigs, fixtures, and DIY guides from Red Beard Ops — with full build videos." />
-  <link rel="icon" href="../images/RBO_Knife_Circle.png" type="image/png" />
+  <link rel="icon" href="../images/RBO_Circle_2026.png" type="image/png" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Match gallery card image styling */
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #111;
+    }
+    .card-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .card:hover .card-thumb img {
+      transform: scale(1.04);
+    }
+  </style>
 </head>
 <body>
 
@@ -14,7 +34,7 @@
   <nav class="navbar">
     <div class="nav-inner">
       <a href="../index.html" class="nav-logo">
-        <img src="../images/RBO_Knife_Circle.png" alt="Red Beard Ops Logo" />
+        <img src="../images/RBO_Circle_2026.png" alt="Red Beard Ops Logo" />
         <span class="nav-logo-text">RED BEARD <span>OPS</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle menu">
@@ -44,79 +64,58 @@
         ════════════════════════════════════════════════
         HOW TO ADD A PROJECT:
         Copy one .card block and fill in:
-          - A thumbnail image or leave the SVG placeholder
-          - The project name and description
-          - The YouTube build video link
+          - Replace the img src with your image path
+          - Replace both href links with the YouTube video URL
+          - Update the project name and description
+
+        New projects go at the TOP (newest first).
         ════════════════════════════════════════════════
       -->
 
       <div class="card-grid">
 
-        <!-- Example Project Card 1 -->
+        <!-- ── Disk Grinder ── -->
         <div class="card">
-          <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">
-            <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-              <!-- Replace with: <img src="../images/project1.jpg" alt="Project Name"> -->
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="28" width="40" height="24" rx="2" stroke="#e8621a" stroke-width="2" fill="none"/>
-                <path d="M20 28V20a12 12 0 0 1 24 0v8" stroke="#e8621a" stroke-width="2"/>
-                <circle cx="32" cy="40" r="4" stroke="#e8621a" stroke-width="2" fill="none"/>
-              </svg>
+          <a href="https://youtu.be/680VFZ8Tm1g" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/DiskGrinder_DIY.jpg" alt="DIY Disk Grinder" />
             </div>
           </a>
           <div class="card-body">
-            <div class="card-tag">Shop Build</div>
-            <h3 class="card-title">Your Project Name Here</h3>
-            <p class="card-desc">Brief description of the build — what it does, what it's made of, how long it took.</p>
-            <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+            <h3 class="card-title">DIY Disk Grinder</h3>
+            <p class="card-desc">Wiring up a VFD and motor can be daunting! This video is intended to demystify the process!</p>
+            <a href="https://youtu.be/680VFZ8Tm1g" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
           </div>
         </div>
 
-        <!-- Example Project Card 2 -->
+        <!-- ── Hydraulic Press ── -->
         <div class="card">
-          <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">
-            <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="28" width="40" height="24" rx="2" stroke="#e8621a" stroke-width="2" fill="none"/>
-                <path d="M20 28V20a12 12 0 0 1 24 0v8" stroke="#e8621a" stroke-width="2"/>
-                <circle cx="32" cy="40" r="4" stroke="#e8621a" stroke-width="2" fill="none"/>
-              </svg>
+          <a href="https://youtu.be/q58iInuNtRY" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Hydraulic_Press_DIY.jpg" alt="DIY Hydraulic Press" />
             </div>
           </a>
           <div class="card-body">
-            <div class="card-tag">Shop Build</div>
-            <h3 class="card-title">Your Project Name Here</h3>
-            <p class="card-desc">Brief description of the build — what it does, what it's made of, how long it took.</p>
-            <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+            <h3 class="card-title">DIY Hydraulic Press</h3>
+            <p class="card-desc">I originally made this H-frame hydraulic press based off of Ron "Bowie" Claiborne's design back in 2006. This is a mix between a rebuild and a restoration; so I hope yall like it!</p>
+            <a href="https://youtu.be/q58iInuNtRY" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
           </div>
         </div>
 
-        <!-- Example Project Card 3 -->
+        <!-- ── Heat Treating Oven ── -->
         <div class="card">
-          <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">
-            <div class="card-thumb" style="background:#111; display:flex; align-items:center; justify-content:center;">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="28" width="40" height="24" rx="2" stroke="#e8621a" stroke-width="2" fill="none"/>
-                <path d="M20 28V20a12 12 0 0 1 24 0v8" stroke="#e8621a" stroke-width="2"/>
-                <circle cx="32" cy="40" r="4" stroke="#e8621a" stroke-width="2" fill="none"/>
-              </svg>
+          <a href="https://youtu.be/7FalYyVASyw" target="_blank" rel="noopener">
+            <div class="card-thumb">
+              <img src="../images/Heat_Treating_Oven_DIY.jpg" alt="DIY Heat Treating Oven" />
             </div>
           </a>
           <div class="card-body">
-            <div class="card-tag">Jig / Fixture</div>
-            <h3 class="card-title">Your Project Name Here</h3>
-            <p class="card-desc">Brief description of the build — what it does, what it's made of, how long it took.</p>
-            <a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
+            <h3 class="card-title">DIY Heat Treating Oven</h3>
+            <p class="card-desc">This is a comprehensive tutorial on how to build a heat treatment oven. Heat treating ovens are extremely handy for knifes makers since they allow precise, accurate temperature control, which is required for some steels and for repeatability. The heat treating ovens on the market can be expensive, so the goal of this video is to provide you with a full guide on how to build one for yourself!</p>
+            <a href="https://youtu.be/7FalYyVASyw" target="_blank" rel="noopener" class="card-link">Watch Build Video →</a>
           </div>
         </div>
 
-      </div>
-
-      <!-- Placeholder notice -->
-      <div style="text-align:center; margin-top:48px; padding:40px; background:var(--gray); border-radius:8px; border:2px dashed var(--border);">
-        <p style="font-family:var(--font-condensed); font-size:1.1rem; font-weight:700; color:var(--muted); letter-spacing:1px;">
-          MORE PROJECTS COMING — Replace placeholder cards with your real builds above.
-        </p>
       </div>
 
     </div>
@@ -136,8 +135,8 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="../images/RBO_Knife_Circle.png" alt="RBO Logo" />
-        <p>Custom handmade knives and shop builds out of a Texas garage. Red Beard Ops LLC.</p>
+        <img src="../images/RBO_Circle_2026.png" alt="RBO Logo" />
+        <p>Red Beard Ops LLC is run by James Keeton — a one-man operation dedicated to building high-quality custom knives and sharing the entire process on YouTube.</p>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
@@ -150,14 +149,25 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Channels</h4>
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://x.com/RedBeardOps" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/redbeardops/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/RedBeardOps/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.patreon.com/c/RedBeardOps" target="_blank" rel="noopener">Patreon</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>YT Channels</h4>
         <ul>
           <li><a href="https://www.youtube.com/@redbeardops" target="_blank" rel="noopener">Red Beard Ops</a></li>
+          <li><a href="https://www.youtube.com/@redbeardengineered" target="_blank" rel="noopener">Red Beard Engineered</a></li>
+          <li><a href="https://www.youtube.com/@RedBeardLifts" target="_blank" rel="noopener">Red Beard Lifts</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Red Beard Ops LLC. All rights reserved.</span>
+      <span>© 2026 Red Beard Ops, LLC. All rights reserved.</span>
       <span>Built by hand. Hosted on Cloudflare.</span>
     </div>
   </footer>
